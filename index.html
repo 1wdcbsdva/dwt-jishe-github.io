@@ -1,22 +1,32 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>智慧种植场景病害诊断系统</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>绿诊云 · 三端应用入口</title>
   <style>
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: system-ui, "Microsoft YaHei", sans-serif; background: #f4f7f5; color: #173b2d; }
-    main { width: min(92vw, 680px); background: #fff; border-radius: 18px; padding: 36px; box-shadow: 0 16px 48px rgba(15,46,39,.1); }
-    h1 { margin: 0 0 12px; font-size: 26px; }
-    p { line-height: 1.8; color: #5b6b64; }
-    .status { display: inline-block; margin-top: 10px; padding: 6px 12px; border-radius: 999px; color: #1b7f5a; background: #e8f5ee; font-size: 13px; }
+    :root{--ink:#173b28;--muted:#6b7f72;--line:#dfe9e1;--green:#2f7d55;--soft:#eef7f1;--bg:#f5f9f5}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(900px 480px at 10% -10%,#e5f2e8,transparent 60%),var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+    .wrap{max-width:1180px;margin:0 auto;padding:64px 28px 72px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:18px;letter-spacing:.4px}
+    .mark{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:linear-gradient(145deg,#4c966d,#286d49);color:#fff;box-shadow:0 10px 24px rgba(47,125,85,.2)}
+    .mark svg{width:26px;height:26px}.hero{margin:76px 0 34px;max-width:720px}.eyebrow{font-size:11px;font-weight:800;letter-spacing:2.4px;color:#5e866c}
+    h1{margin:14px 0 14px;font-size:clamp(34px,5vw,58px);line-height:1.15;letter-spacing:-1.5px}p{margin:0;color:var(--muted);font-size:15px;line-height:1.9}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}.card{display:flex;flex-direction:column;min-height:260px;padding:26px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.9);text-decoration:none;color:inherit;box-shadow:0 14px 40px rgba(35,77,51,.06);transition:.22s}
+    .card:hover{transform:translateY(-5px);border-color:#b8d3c0;box-shadow:0 22px 48px rgba(35,77,51,.11)}.icon{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--soft);color:var(--green);font-size:21px;font-weight:800}.card h2{margin:24px 0 10px;font-size:21px}.card p{font-size:13px;line-height:1.8}.card .go{margin-top:auto;padding-top:24px;color:var(--green);font-size:12px;font-weight:800;letter-spacing:.3px}
+    .foot{margin-top:34px;color:#8b9c91;font-size:11px}.tag{display:inline-flex;margin-left:9px;padding:3px 8px;border:1px solid #dbe8de;border-radius:20px;background:#fff;color:#6f8376;font-size:10px}
+    @media(max-width:860px){.grid{grid-template-columns:1fr}.hero{margin-top:52px}.wrap{padding:36px 20px 48px}}
   </style>
 </head>
 <body>
-  <main>
-    <h1>智慧种植场景病害诊断系统</h1>
-    <p>前端页面部署准备中。管理端与农户端页面将在开发完成后发布到本页面。</p>
-    <span class="status">GitHub Pages 已配置</span>
+  <main class="wrap">
+    <div class="brand"><span class="mark"><svg viewBox="0 0 32 32" fill="none"><path d="M26 7.5c-6.7.3-11.2 3.2-12.9 8.5-1.4 4.3.6 7.6 4.2 8.2 5.7.9 9.1-4.6 8.7-16.7Z" fill="currentColor"/><path d="M7 25c2.6-6.2 7.1-10 14.1-12.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>绿诊云 · 农业智能诊断</span><span class="tag">静态演示版</span></div>
+    <section class="hero"><div class="eyebrow">THREE APPS · ONE AGRICULTURAL CLOUD</div><h1>三端独立应用，<br/>各司其职。</h1><p>系统管理端负责平台治理，农场工作台负责日常运营，农户端负责移动查看。三端分别构建、可分别部署，以下入口均使用本地模拟数据。</p></section>
+    <section class="grid">
+      <a class="card" href="./system/"><span class="icon">S</span><h2>系统管理端</h2><p>模型版本、评测、Prompt、知识库、农技内容与系统审计。面向 SYSTEM_ADMIN。</p><span class="go">进入系统管理端 →</span></a>
+      <a class="card" href="./farm/"><span class="icon">F</span><h2>农场管理工作台</h2><p>地块、设备、环境、航拍任务、诊断复核与成员权限。面向农场管理者与工作人员。</p><span class="go">进入农场工作台 →</span></a>
+      <a class="card" href="./farmer/"><span class="icon">M</span><h2>农户端</h2><p>环境、诊断、农技服务、地块与个人中心。移动端优先，支持 H5 直接访问。</p><span class="go">进入农户端 →</span></a>
+    </section>
+    <div class="foot">Green Diagnosis Cloud · GitHub Pages demo · 三端分别构建</div>
   </main>
 </body>
 </html>
